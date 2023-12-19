@@ -46,6 +46,7 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             this.saveFileDialogTable_KNA = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTable_KNA = new System.Windows.Forms.OpenFileDialog();
             this.Book_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Жанр = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Year_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Finished_KNA = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -82,25 +83,25 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             // openToolStripMenuItem_KNA
             // 
             this.openToolStripMenuItem_KNA.Name = "openToolStripMenuItem_KNA";
-            this.openToolStripMenuItem_KNA.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem_KNA.Size = new System.Drawing.Size(133, 22);
             this.openToolStripMenuItem_KNA.Text = "Открыть";
             // 
             // saveToolStripMenuItem_KNA
             // 
             this.saveToolStripMenuItem_KNA.Name = "saveToolStripMenuItem_KNA";
-            this.saveToolStripMenuItem_KNA.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem_KNA.Size = new System.Drawing.Size(133, 22);
             this.saveToolStripMenuItem_KNA.Text = "Сохранить";
             // 
             // addToolStripMenuItem_KNA
             // 
             this.addToolStripMenuItem_KNA.Name = "addToolStripMenuItem_KNA";
-            this.addToolStripMenuItem_KNA.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem_KNA.Size = new System.Drawing.Size(133, 22);
             this.addToolStripMenuItem_KNA.Text = "Добавить";
             // 
             // infoToolStripMenuItem_KNA
             // 
             this.infoToolStripMenuItem_KNA.Name = "infoToolStripMenuItem_KNA";
-            this.infoToolStripMenuItem_KNA.Size = new System.Drawing.Size(180, 22);
+            this.infoToolStripMenuItem_KNA.Size = new System.Drawing.Size(133, 22);
             this.infoToolStripMenuItem_KNA.Text = "Инфо";
             // 
             // ToolStripAboutProgram_KNA
@@ -125,6 +126,7 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             this.dataGridViewData_KNA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewData_KNA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Book_KNA,
+            this.Жанр,
             this.Year_KNA,
             this.Autor_KNA,
             this.Finished_KNA});
@@ -210,6 +212,11 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             this.Book_KNA.MinimumWidth = 6;
             this.Book_KNA.Name = "Book_KNA";
             // 
+            // Жанр
+            // 
+            this.Жанр.HeaderText = "Жанр";
+            this.Жанр.Name = "Жанр";
+            // 
             // Year_KNA
             // 
             this.Year_KNA.HeaderText = "Автор";
@@ -269,6 +276,7 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
         private System.Windows.Forms.SaveFileDialog saveFileDialogTable_KNA;
         private System.Windows.Forms.OpenFileDialog openFileDialogTable_KNA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Book_KNA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Жанр;
         private System.Windows.Forms.DataGridViewTextBoxColumn Year_KNA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor_KNA;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Finished_KNA;
