@@ -14,22 +14,30 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4.Lib
     {
         public string[,] LoadFromDataFile(string filePath)
         {
-            string fileData = File.ReadAllText(filePath);
-            fileData = fileData.Replace('\n', '\r');
-            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            string fileDta = File.ReadAllText(filePath);
+            fileDta = fileDta.Replace('\n', '\r');
+            string[] lines = fileDta.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            if (lines.Length < 2)
+            {
+                return null;
+            }
+
             int rows, columns;
-            rows = lines.Length;
+            rows = lines.Length - 1;
             columns = lines[0].Split(';').Length;
-            string[,] arrayValue = new string[rows, columns];
-            for (int i = 0; i < rows; i++)
+
+            string[,] arrayValues = new string[rows, columns];
+
+            for (int i = 1; i < lines.Length; i++)
             {
                 string[] line_r = lines[i].Split(';');
                 for (int j = 0; j < columns; j++)
                 {
-                    arrayValue[i, j] = Convert.ToString(line_r[j]);
+                    arrayValues[i - 1, j] = Convert.ToString(line_r[j]);
                 }
             }
-            return arrayValue;
+
+            return arrayValues;
         }
     }
 }
