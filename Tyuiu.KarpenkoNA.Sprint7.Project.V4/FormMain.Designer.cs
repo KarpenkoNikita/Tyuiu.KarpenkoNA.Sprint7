@@ -38,6 +38,12 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             this.ToolStripAboutProgram_KNA = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripExit_KNA = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewData_KNA = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Book_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Zhanr_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Year_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Autor_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBoxMoves_KNA = new System.Windows.Forms.GroupBox();
             this.buttonOpen_KNA = new System.Windows.Forms.Button();
             this.buttonHelp_KNA = new System.Windows.Forms.Button();
@@ -45,12 +51,6 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             this.buttonSave_KNA = new System.Windows.Forms.Button();
             this.saveFileDialogTable_KNA = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTable_KNA = new System.Windows.Forms.OpenFileDialog();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Book_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Zhanr_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Year_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Autor_KNA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.menuStripData_KNA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData_KNA)).BeginInit();
             this.groupBoxMoves_KNA.SuspendLayout();
@@ -84,38 +84,44 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             // openToolStripMenuItem_KNA
             // 
             this.openToolStripMenuItem_KNA.Name = "openToolStripMenuItem_KNA";
-            this.openToolStripMenuItem_KNA.Size = new System.Drawing.Size(133, 22);
+            this.openToolStripMenuItem_KNA.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem_KNA.Text = "Открыть";
+            this.openToolStripMenuItem_KNA.Click += new System.EventHandler(this.openToolStripMenuItem_KNA_Click);
             // 
             // saveToolStripMenuItem_KNA
             // 
             this.saveToolStripMenuItem_KNA.Name = "saveToolStripMenuItem_KNA";
-            this.saveToolStripMenuItem_KNA.Size = new System.Drawing.Size(133, 22);
+            this.saveToolStripMenuItem_KNA.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem_KNA.Text = "Сохранить";
+            this.saveToolStripMenuItem_KNA.Click += new System.EventHandler(this.saveToolStripMenuItem_KNA_Click);
             // 
             // addToolStripMenuItem_KNA
             // 
             this.addToolStripMenuItem_KNA.Name = "addToolStripMenuItem_KNA";
-            this.addToolStripMenuItem_KNA.Size = new System.Drawing.Size(133, 22);
+            this.addToolStripMenuItem_KNA.Size = new System.Drawing.Size(180, 22);
             this.addToolStripMenuItem_KNA.Text = "Добавить";
+            this.addToolStripMenuItem_KNA.Click += new System.EventHandler(this.addToolStripMenuItem_KNA_Click);
             // 
             // infoToolStripMenuItem_KNA
             // 
             this.infoToolStripMenuItem_KNA.Name = "infoToolStripMenuItem_KNA";
-            this.infoToolStripMenuItem_KNA.Size = new System.Drawing.Size(133, 22);
+            this.infoToolStripMenuItem_KNA.Size = new System.Drawing.Size(180, 22);
             this.infoToolStripMenuItem_KNA.Text = "Инфо";
+            this.infoToolStripMenuItem_KNA.Click += new System.EventHandler(this.infoToolStripMenuItem_KNA_Click);
             // 
             // ToolStripAboutProgram_KNA
             // 
             this.ToolStripAboutProgram_KNA.Name = "ToolStripAboutProgram_KNA";
             this.ToolStripAboutProgram_KNA.Size = new System.Drawing.Size(94, 20);
             this.ToolStripAboutProgram_KNA.Text = "О программе";
+            this.ToolStripAboutProgram_KNA.Click += new System.EventHandler(this.ToolStripAboutProgram_KNA_Click);
             // 
             // exitToolStripExit_KNA
             // 
             this.exitToolStripExit_KNA.Name = "exitToolStripExit_KNA";
             this.exitToolStripExit_KNA.Size = new System.Drawing.Size(54, 20);
             this.exitToolStripExit_KNA.Text = "Выход";
+            this.exitToolStripExit_KNA.Click += new System.EventHandler(this.exitToolStripExit_KNA_Click);
             // 
             // dataGridViewData_KNA
             // 
@@ -140,6 +146,39 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             this.dataGridViewData_KNA.RowTemplate.Height = 24;
             this.dataGridViewData_KNA.Size = new System.Drawing.Size(654, 447);
             this.dataGridViewData_KNA.TabIndex = 1;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Book_KNA
+            // 
+            this.Book_KNA.HeaderText = "Название";
+            this.Book_KNA.MinimumWidth = 6;
+            this.Book_KNA.Name = "Book_KNA";
+            // 
+            // Zhanr_KNA
+            // 
+            this.Zhanr_KNA.HeaderText = "Жанр";
+            this.Zhanr_KNA.Name = "Zhanr_KNA";
+            // 
+            // Year_KNA
+            // 
+            this.Year_KNA.HeaderText = "Автор";
+            this.Year_KNA.MinimumWidth = 6;
+            this.Year_KNA.Name = "Year_KNA";
+            // 
+            // Autor_KNA
+            // 
+            this.Autor_KNA.HeaderText = "Год издания";
+            this.Autor_KNA.MinimumWidth = 6;
+            this.Autor_KNA.Name = "Autor_KNA";
+            // 
+            // gh
+            // 
+            this.gh.HeaderText = "Прочитано";
+            this.gh.Name = "gh";
             // 
             // groupBoxMoves_KNA
             // 
@@ -211,39 +250,6 @@ namespace Tyuiu.KarpenkoNA.Sprint7.Project.V4
             // openFileDialogTable_KNA
             // 
             this.openFileDialogTable_KNA.FileName = "openFileDialog1";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Book_KNA
-            // 
-            this.Book_KNA.HeaderText = "Название";
-            this.Book_KNA.MinimumWidth = 6;
-            this.Book_KNA.Name = "Book_KNA";
-            // 
-            // Zhanr_KNA
-            // 
-            this.Zhanr_KNA.HeaderText = "Жанр";
-            this.Zhanr_KNA.Name = "Zhanr_KNA";
-            // 
-            // Year_KNA
-            // 
-            this.Year_KNA.HeaderText = "Автор";
-            this.Year_KNA.MinimumWidth = 6;
-            this.Year_KNA.Name = "Year_KNA";
-            // 
-            // Autor_KNA
-            // 
-            this.Autor_KNA.HeaderText = "Год издания";
-            this.Autor_KNA.MinimumWidth = 6;
-            this.Autor_KNA.Name = "Autor_KNA";
-            // 
-            // gh
-            // 
-            this.gh.HeaderText = "Прочитано";
-            this.gh.Name = "gh";
             // 
             // FormMain_KNA
             // 
